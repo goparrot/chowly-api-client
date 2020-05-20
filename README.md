@@ -21,17 +21,39 @@ The library does not modify request and response payload.
 ```typescript
 import { ChowlyClient } from '@goparrot/chowly-api-client';
 
-(() => {
-    const client = new ChowlyClient({
-        apiKey: 'test',
-        baseUrl: 'baseurl',
-        maxRetries: 5
-    });
+const customer:ICustomer = { /* your customer data */ };
 
-    client.list()
+const info:IOrderInfo = { /* your info data */ };
+
+const item:IOrderItem = { /* your item data */ };
+
+const chowlyOrder:ICreateOrder = {
+    customer,
+    info,
+    items: [item],
+};
+
+const client = new ChowlyClient({
+    apiKey: 'test',
+    baseUrl: 'baseurl',
+    maxRetries: 5
+});
+
+// Get menu
+client.getMenu()
         .then(data => console.log(data))
         .catch(error => console.log(error));
-})();
+
+// Create order
+client.createOrder(chowlyOrder)
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+
+// Get order
+client.getOrder(orderId)
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+
 ```
 
 ## Available Options
