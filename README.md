@@ -12,26 +12,16 @@ The library does not modify request and response payload.
 
 ## Installation
 
-    $ npm i @goparrot/chowly-api-client
+```
+npm i @goparrot/chowly-api-client
+```
 
 ## Usage
 
 ### Simple example
 
 ```typescript
-import { ChowlyClient } from '@goparrot/chowly-api-client';
-
-const customer:ICustomer = { /* your customer data */ };
-
-const info:IOrderInfo = { /* your info data */ };
-
-const item:IOrderItem = { /* your item data */ };
-
-const chowlyOrder:ICreateOrder = {
-    customer,
-    info,
-    items: [item],
-};
+import { ChowlyClient, ICreateOrder } from '@goparrot/chowly-api-client';
 
 const client = new ChowlyClient({
     apiKey: 'test',
@@ -41,19 +31,22 @@ const client = new ChowlyClient({
 
 // Get menu
 client.getMenu()
-        .then(data => console.log(data))
-        .catch(error => console.log(error));
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
 
 // Create order
+const chowlyOrder: ICreateOrder = { /* Create order payload */ };
+
 client.createOrder(chowlyOrder)
     .then(data => console.log(data))
     .catch(error => console.log(error));
 
 // Get order
+const orderId: string = 'chowly-order-id';
+
 client.getOrder(orderId)
     .then(data => console.log(data))
     .catch(error => console.log(error));
-
 ```
 
 ## Available Options
@@ -81,12 +74,16 @@ See [`CONTRIBUTING`](https://github.com/goparrot/chowly-api-client/blob/master/C
 
 In order to run the test suite, install the development dependencies:
 
-    $ npm i
+```
+npm i
+```
 
 Then, run the following command:
 
-    $ npm run coverage
+```
+npm run coverage
+```
 
 ## License
 
-Square Connect Plus is [MIT licensed](LICENSE).
+`@goparrot/chowly-api-client` is licensed under the [MIT license](LICENSE).
