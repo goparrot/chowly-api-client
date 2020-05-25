@@ -7,7 +7,6 @@ export const Customer: ICustomer = {
     id: 'e',
     name: 'w',
     phone: '5555555555',
-    email: null,
     address1: '1234 S Main Street',
     address2: 'Suite 180',
     city: 'New York',
@@ -19,7 +18,6 @@ export const Customer: ICustomer = {
 
 const Info: IOrderInfo = {
     id: '4f20a834-d67b-4c76-bb04-2d79fb4c71f172e71qe7',
-    scheduled_time: null,
     pickup_code: 'AZ45jd9pQckJf078',
     service_type: ServiceTypeEnum.DELIVERY,
     payment_is_cash: false,
