@@ -21,9 +21,9 @@ npm i @goparrot/chowly-api-client
 ### Simple example
 
 ```typescript
-import { ChowlyClient, ICreateOrder } from '@goparrot/chowly-api-client';
+import { ChowlyApiClient, ICreateOrder } from '@goparrot/chowly-api-client';
 
-const client = new ChowlyClient({
+const client = new ChowlyApiClient({
     apiKey: 'test',
     baseUrl: 'baseurl',
     maxRetries: 5
@@ -51,7 +51,7 @@ client.getOrder(orderId)
 
 ## Available Options
 
-### `ChowlyClient` Options
+### `ChowlyApiClient` Options
     apyKey: string;
     baseUrl: string;
     maxRetries?: number;

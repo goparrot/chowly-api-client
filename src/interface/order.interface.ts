@@ -5,20 +5,20 @@ export interface ICustomer {
     id: string;
     name: string;
     phone: string;
-    email: string | null;
+    email?: string;
     address1?: string;
-    address2: string | null;
+    address2?: string;
     city?: string;
     state?: string;
     zip?: string;
-    cross_street: string | null;
-    special_instructions: string | null;
+    cross_street?: string;
+    special_instructions?: string;
 }
 
 export interface IOrderInfo {
     id: string;
-    scheduled_time: IScheduledTime[] | null;
-    pickup_code: string | null;
+    scheduled_time?: IScheduledTime[];
+    pickup_code?: string;
     service_type: ServiceTypeEnum;
     payment_is_cash: boolean;
     payment_type: PaymentTypeEnum;
@@ -29,25 +29,25 @@ export interface IOrderInfo {
     sales_tax: string;
     tip: string;
     total: string;
-    coupon_description: string | null;
+    coupon_description?: string;
     coupon_amount?: string;
 }
 
 export interface IOrderItem {
     id: string;
     name: string;
-    external_id: string | null;
+    external_id?: string;
     price: string;
     quantity: string;
-    notes: string | null;
+    notes?: string;
     mods: IMod[];
 }
 
 export interface IMod {
     id: string;
     name: string;
-    category: string | null;
-    external_id: string | null;
+    category?: string;
+    external_id?: string;
     price: string;
     quantity: string;
 }
