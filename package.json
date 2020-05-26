@@ -1,6 +1,6 @@
 {
     "name": "@goparrot/chowly-api-client",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Typescript library which implements Chowly API",
     "engines": {
         "node": ">=12"
