@@ -5,7 +5,7 @@ export class Order implements ICreateOrder {
     customer: Customer;
     info: Info;
     items: ItemOrder[];
-    id?: string;
+    id: string;
 }
 
 export class Customer implements ICustomer {
