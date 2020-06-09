@@ -1,4 +1,4 @@
-import { IOrderInfo, ICustomer, IOrderItem, IScheduledTime, IMod, ICreateOrder } from '../interface';
+import { IOrderInfo, ICustomer, IOrderItem, IMod, ICreateOrder } from '../interface';
 import { ServiceTypeEnum, PaymentTypeEnum } from '../enum';
 
 export class Order implements ICreateOrder {
@@ -24,7 +24,7 @@ export class Customer implements ICustomer {
 
 export class Info implements IOrderInfo {
     id: string;
-    scheduled_time?: IScheduledTime[];
+    scheduled_time?: string;
     pickup_code?: string;
     service_type: ServiceTypeEnum;
     payment_is_cash: boolean;
