@@ -1,5 +1,4 @@
-import { DayOfWeekEnum, ServiceTypeEnum, PaymentTypeEnum } from '../enum';
-import { ITimePeriod } from './chowly.interface';
+import { ServiceTypeEnum, PaymentTypeEnum } from '../enum';
 
 export interface ICustomer {
     id: string;
@@ -17,7 +16,7 @@ export interface ICustomer {
 
 export interface IOrderInfo {
     id: string;
-    scheduled_time?: IScheduledTime[];
+    scheduled_time?: string;
     pickup_code?: string;
     service_type: ServiceTypeEnum;
     payment_is_cash: boolean;
@@ -57,10 +56,4 @@ export interface ICreateOrder {
     info: IOrderInfo;
     items: IOrderItem[];
     id?: string;
-}
-
-export interface IScheduledTime {
-    time_periods: ITimePeriod[];
-    enabled: boolean;
-    day_of_week: DayOfWeekEnum;
 }
