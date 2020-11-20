@@ -7,6 +7,7 @@ export class Sections implements ISections {
 export class Subsection implements ISubsection {
     items: Item[];
     subsection_id: string;
+    external_id: string;
     title: string;
 }
 
@@ -14,6 +15,7 @@ export class Section implements ISection {
     section_id: string;
     service_availability: IServiceAvailability[];
     subsections: Subsection[];
+    external_id: string;
     subtitle: string;
     title: string;
 }
@@ -36,6 +38,7 @@ export class Item implements IItem {
 
 export class Customization implements ICustomization {
     customization_id: string;
+    external_id: string;
     customization_options: CustomizationOption[];
     max_permitted: number;
     min_permitted: number;

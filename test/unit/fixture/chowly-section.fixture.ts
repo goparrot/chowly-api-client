@@ -25,6 +25,7 @@ export const chowlySection: Section = {
     section_id: sectionId,
     title: 'Big Wig Tacos & Burritos',
     subtitle: 'Menu',
+    external_id: 'A8271711',
 };
 
 export const expectedChowlySection = plainToClass(Sections, chowlySection);

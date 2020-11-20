@@ -8,6 +8,7 @@ export interface ISection {
     section_id: string;
     title: string;
     subtitle: string;
+    external_id: string;
 }
 
 export interface IServiceAvailability {
@@ -25,6 +26,7 @@ export interface ISubsection {
     items: IItem[];
     subsection_id: string;
     title: string;
+    external_id: string;
 }
 
 export interface IItem {
@@ -49,6 +51,7 @@ export interface ICustomization {
     title: string;
     max_permitted: number;
     min_permitted: number;
+    external_id: string;
 }
 
 export interface ICustomizationOption {
