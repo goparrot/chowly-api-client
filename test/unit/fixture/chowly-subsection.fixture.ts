@@ -6,4 +6,5 @@ export const chowlySubsection: Subsection = {
     items: [chowlyItem],
     subsection_id: subsectionId,
     title: 'Pick a Vessel',
+    external_id: 'A8271711',
 };

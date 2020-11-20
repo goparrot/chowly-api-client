@@ -8,4 +8,5 @@ export const chowlyCustomization: Customization = {
     title: 'Extra Additions',
     max_permitted: 6,
     min_permitted: 0,
+    external_id: 'A8271711',
 };
