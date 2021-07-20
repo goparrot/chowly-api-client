@@ -52,12 +52,10 @@ export function createAxiosInstance(config: IFacadeConfig = {}): AxiosInstance {
         ),
     );
 
-    axios.interceptors.request.use(
-        async (axiosConfig: AxiosRequestConfig): Promise<AxiosRequestConfig> => {
-            axiosConfig.headers['api-key'] = config.apiKey;
-            return axiosConfig;
-        },
-    );
+    axios.interceptors.request.use(async (axiosConfig: AxiosRequestConfig): Promise<AxiosRequestConfig> => {
+        axiosConfig.headers['api-key'] = config.apiKey;
+        return axiosConfig;
+    });
 
     return axios;
 }
